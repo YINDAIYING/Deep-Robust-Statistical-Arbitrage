@@ -13,6 +13,26 @@ import json
 import time
 import os
 import random
+import yfinance as yf
+
+#10_assets
+asset_name_list = ['OKE', 'PG', 'RCL', 'SBUX', 'UNM', 'USB', 'VMC', 'WELL', 'WMB', 'XOM']
+
+#20_assets
+#asset_name_list = ['APA', 'BXP', 'DXC', 'F', 'GD', 'GS', 'HPQ', 'IT', 'MCD', 'MMM', 'OKE', 'PG', 'RCL', 'SBUX', 'UNM', 'USB', 'VMC', 'WELL', 'WMB', 'XOM']
+
+#30_assets
+#asset_name_list = ['APA', 'BXP', 'DXC', 'F', 'GD', 'GL', 'GS', 'HPQ', 'HST', 'IT', 'LUV', 'MCD', 'MMM', 'MO', 'OKE', 'OMC', 'PCAR', 'PG', 'RCL', 'RTX', 'SBUX', 'UNM', 'USB', 'VFC', 'VMC', 'WELL', 'WMB', 'XEL', 'XOM', 'YUM']
+
+#40_assets
+#asset_name_list = ['APA', 'ATO', 'BXP', 'CNP', 'DXC', 'F', 'GD', 'GL', 'GPS', 'GS', 'HPQ', 'HST', 'IT', 'JNJ', 'K', 'LUV', 'MCD', 'MMM', 'MO', 'NTAP', 'OKE', 'OMC', 'PCAR', 'PG', 'pnl.', 'RCL', 'RTX', 'SBUX', 'STT', 'TAP', 'TXT', 'UNM', 'USB', 'VFC', 'VMC', 'WELL', 'WFC', 'WMB', 'XEL', 'XOM', 'YUM']
+
+#50_assets
+#asset_name_list = ['ADM', 'APA', 'ATO', 'BXP', 'CNP', 'DD', 'DIS', 'DXC', 'F', 'GD', 'GL', 'GPS', 'GS', 'HP', 'HPQ', 'HST', 'INTC', 'IT', 'JNJ', 'K', 'KO', 'LUV', 'MCD', 'MMM', 'MO', 'MRO', 'NTAP', 'OKE', 'OMC', 'ORCL', 'PCAR', 'PFE', 'PG', 'RCL', 'RTX', 'SBUX', 'STT', 'TAP', 'TXT', 'UNM', 'USB', 'VFC', 'VMC', 'WELL', 'WFC', 'WMB', 'WMT', 'XEL', 'XOM', 'YUM']
+
+for asset_name in asset_name_list:
+  file_data = yf.download(asset_name, start="2000-01-01", end="2021-01-01")
+  file_data.to_csv(asset_name+".csv")
 
 #read uploaded csv files
 files = sorted([file for file in os.listdir() if file[-3:]=='csv'])

@@ -13,6 +13,12 @@ import json
 import time
 import os
 import random
+import yfinance as yf
+
+BP_data = yf.download("BP", start="1970-01-02", end="2021-01-01")
+XOM_data = yf.download("XOM", start="1970-01-02", end="2021-01-01")
+BP_data.to_csv("BP.csv")
+XOM_data.to_csv("XOM.csv")
 
 df = pd.read_csv("XOM.csv")
 df2 = pd.read_csv("BP.csv")

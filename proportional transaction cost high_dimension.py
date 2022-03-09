@@ -31,7 +31,11 @@ asset_name_list = ['OKE', 'PG', 'RCL', 'SBUX', 'UNM', 'USB', 'VMC', 'WELL', 'WMB
 #asset_name_list = ['ADM', 'APA', 'ATO', 'BXP', 'CNP', 'DD', 'DIS', 'DXC', 'F', 'GD', 'GL', 'GPS', 'GS', 'HP', 'HPQ', 'HST', 'INTC', 'IT', 'JNJ', 'K', 'KO', 'LUV', 'MCD', 'MMM', 'MO', 'MRO', 'NTAP', 'OKE', 'OMC', 'ORCL', 'PCAR', 'PFE', 'PG', 'RCL', 'RTX', 'SBUX', 'STT', 'TAP', 'TXT', 'UNM', 'USB', 'VFC', 'VMC', 'WELL', 'WFC', 'WMB', 'WMT', 'XEL', 'XOM', 'YUM']
 
 for asset_name in asset_name_list:
-  file_data = yf.download(asset_name, start="2000-01-01", end="2021-01-01")
+  # there is a bug when downloading the data of "XEL" 
+  if asset_name == "XEL":
+    file_data = yf.download(asset_name, start="2000-01-02", end="2021-01-01")
+  else:
+    file_data = yf.download(asset_name, start="2000-01-01", end="2021-01-01")
   file_data.to_csv(asset_name+".csv")
 
 #read uploaded csv files

@@ -28,7 +28,7 @@ df2 = df2[['Date','Close']]
 df2.columns = ['Date','Close2']
 
 def format_date(date):
-    date = date.split('-')
+    date = (date.split(' ')[0]).split('-')
     if len(date[1])==1:
         date[1] = '0'+date[1]
     if len(date[2])==1:

@@ -25,7 +25,7 @@ asset_name_list = ['OKE', 'PG', 'RCL', 'SBUX', 'UNM', 'USB', 'VMC', 'WELL', 'WMB
 #asset_name_list = ['APA', 'BXP', 'DXC', 'F', 'GD', 'GL', 'GS', 'HPQ', 'HST', 'IT', 'LUV', 'MCD', 'MMM', 'MO', 'OKE', 'OMC', 'PCAR', 'PG', 'RCL', 'RTX', 'SBUX', 'UNM', 'USB', 'VFC', 'VMC', 'WELL', 'WMB', 'XEL', 'XOM', 'YUM']
 
 #40_assets
-#asset_name_list = ['APA', 'ATO', 'BXP', 'CNP', 'DXC', 'F', 'GD', 'GL', 'GPS', 'GS', 'HPQ', 'HST', 'IT', 'JNJ', 'K', 'LUV', 'MCD', 'MMM', 'MO', 'NTAP', 'OKE', 'OMC', 'PCAR', 'PG', 'pnl.', 'RCL', 'RTX', 'SBUX', 'STT', 'TAP', 'TXT', 'UNM', 'USB', 'VFC', 'VMC', 'WELL', 'WFC', 'WMB', 'XEL', 'XOM', 'YUM']
+#asset_name_list = ['APA', 'ATO', 'BXP', 'CNP', 'DXC', 'F', 'GD', 'GL', 'GPS', 'GS', 'HPQ', 'HST', 'IT', 'JNJ', 'K', 'LUV', 'MCD', 'MMM', 'MO', 'NTAP', 'OKE', 'OMC', 'PCAR', 'PG', 'RCL', 'RTX', 'SBUX', 'STT', 'TAP', 'TXT', 'UNM', 'USB', 'VFC', 'VMC', 'WELL', 'WFC', 'WMB', 'XEL', 'XOM', 'YUM']
 
 #50_assets
 #asset_name_list = ['ADM', 'APA', 'ATO', 'BXP', 'CNP', 'DD', 'DIS', 'DXC', 'F', 'GD', 'GL', 'GPS', 'GS', 'HP', 'HPQ', 'HST', 'INTC', 'IT', 'JNJ', 'K', 'KO', 'LUV', 'MCD', 'MMM', 'MO', 'MRO', 'NTAP', 'OKE', 'OMC', 'ORCL', 'PCAR', 'PFE', 'PG', 'RCL', 'RTX', 'SBUX', 'STT', 'TAP', 'TXT', 'UNM', 'USB', 'VFC', 'VMC', 'WELL', 'WFC', 'WMB', 'WMT', 'XEL', 'XOM', 'YUM']

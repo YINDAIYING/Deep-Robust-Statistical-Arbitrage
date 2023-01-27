@@ -14,6 +14,13 @@ import time
 import os
 import random
 
+if torch.cuda.is_available():
+    device = "cuda"
+elif torch.backends.mps.is_available():
+    device = "mps"
+else:
+    device = "cpu"
+
 df = pd.read_csv("^STOXX50E.csv")
 df2 = pd.read_csv("S&P500.csv")
 df = df[['Date','Close']]
@@ -169,6 +176,7 @@ def stat_arb_success(stock_test, net):
     res['Best'] = round(max(success),2)
     res['Worst'] = round(min(success),2)
     res['Average'] = round(success.mean(),2)
+    res['Std'] = round(success.std(),2)
     res['loss_perc'] = round(100*float(np.sum(success<0)/len(success)),2)
     res['gains_perc'] = round(100*float(np.sum(success>0)/len(success)),2)
     res['sharp_ratio'] = round(np.sqrt(252.0/9)*success.mean()/success.std(),3)
@@ -206,6 +214,7 @@ def stat_arb_success_buy_and_hold(stock_test):
     res['Best'] = round(max(success),2)
     res['Worst'] = round(min(success),2)
     res['Average'] = round(success.mean(),2)
+    res['Std'] = round(success.std(),2)
     res['loss_perc'] = round(100*float(np.sum(success<0)/len(success)),2)
     res['gains_perc'] = round(100*float(np.sum(success>0)/len(success)),2)
     res['sharp_ratio'] = round(np.sqrt(252.0/9)*success.mean()/success.std(),3)
@@ -259,7 +268,7 @@ rescaled_upper_bounds = S_upper*100 + z
 
 print(rescaled_lower_bounds, rescaled_upper_bounds)
 
-results = {'Average':[], 'Best':[], 'Worst':[], 'loss_perc':[], 'gains_perc':[], 'sharp_ratio':[], 'sortino_ratio':[]}
+results = {'Average':[], 'Std':[], 'Best':[], 'Worst':[], 'loss_perc':[], 'gains_perc':[], 'sharp_ratio':[], 'sortino_ratio':[]}
 
 num_epochs = 100
 N_measures = 5
@@ -357,6 +366,7 @@ plt.hist([p['Average'] for p in pnl])
 
 print("Overall Profit:", np.round(np.mean([result['Gain'] for result in pnl]),2))
 print("Average Profit:", np.round(np.mean([result['Average'] for result in pnl]),2))
+print("Profit Std:", np.round(np.mean([result['Std'] for result in pnl]),2))
 print("gains_perc:", np.round(np.mean([result['gains_perc'] for result in pnl]),2))
 print("Best:", np.round(np.mean([result['Best'] for result in pnl]),2))
 print("Worst:", np.round(np.mean([result['Worst'] for result in pnl]),2))

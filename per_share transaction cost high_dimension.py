@@ -392,4 +392,3 @@ print("Best:", np.round(np.mean([result['Best'] for result in pnl]),2))
 print("Worst:", np.round(np.mean([result['Worst'] for result in pnl]),2))
 print("sharp_ratio:", np.round(np.mean([result['sharp_ratio'] for result in pnl]),4))
 print("sortino_ratio:", np.round(np.mean([result['sortino_ratio'] for result in pnl]),4))
-

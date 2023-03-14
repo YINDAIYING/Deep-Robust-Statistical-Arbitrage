@@ -25,9 +25,7 @@ The file "per_share transaction cost high_dimension.py" covers the neural networ
 
 The file "proportional transaction cost high_dimension.py" covers the neural network approach in high dimensional setting (10-50 assets) with proportional transaction cost applied.
 
-
-The file "Online Learning.py" covers the approach which train the model
-with streamed data, that is, to fine-tune the model with the most recent incoming data, known as online-learning in the literature.
+The file "Online Learning.py" covers the approach which train the model with streamed data, that is, to fine-tune the model with the most recent incoming data, known as online-learning in the literature.
 
 # Implementation
 Our implementation is based on the deep learning engine Pytorch. Note that CUDA is needed for execution!

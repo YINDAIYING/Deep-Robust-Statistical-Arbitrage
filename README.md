@@ -21,11 +21,13 @@ The file "2_assets (STOXX&SP500) bad_market.py " covers the neural network appro
 
 The file "2_assets (XOM&BP) pairs_trading.py" covers the neural network approach in a situation where the pairs trading strategy fails.
 
-The file "per_share transaction cost high_dimension.py" covers the neural network approach in high dimensional setting (10-50 assets) with per_share transaction cost applied.
+The file "per_share transaction cost high_dimension.py" covers the neural network approach in a high dimensional setting (10-50 assets) with per_share transaction cost applied.
 
-The file "proportional transaction cost high_dimension.py" covers the neural network approach in high dimensional setting (10-50 assets) with proportional transaction cost applied.
+The file "proportional transaction cost high_dimension.py" covers the neural network approach in a high dimensional setting (10-50 assets) with proportional transaction cost applied.
 
-The file "Online Learning.py" covers the approach which train the model with streamed data, that is, to fine-tune the model with the most recent incoming data, known as online-learning in the literature.
+The file "Online Learning.py" covers the approach which trains the model with streamed data, that is, to fine-tune the model with the most recent incoming data, known as online-learning in the literature.
+
+The file "plot_equity_cuve_2_assets (STOXX&SP500).py" plots the equity curve of the trained strategies over time.
 
 # Implementation
 Our implementation is based on the deep learning engine Pytorch. Note that CUDA is needed for execution!

@@ -1,5 +1,5 @@
 # Deep-Robust-Statistical-Arbitrage
-This repository stores the implementation of the paper "DETECTING DATA-DRIVEN ROBUST STATISTICAL ARBITRAGE STRATEGIES WITH DEEP NEURAL NETWORKS". 
+This repository stores the implementation of the paper "DETECTING DATA-DRIVEN ROBUST STATISTICAL ARBITRAGE STRATEGIES WITH DEEP NEURAL NETWORKS", which has been accepted for publication in the SIAM Journal on Financial Mathematics (2024).
 
 # Abstract
 We present an approach, based on deep neural networks, that allows identifying robust statistical arbitrage strategies in financial markets. Robust statistical arbitrage strategies refer
